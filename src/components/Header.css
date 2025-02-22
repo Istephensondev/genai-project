@@ -1,0 +1,83 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header Container */
+.header {
+  display: flex;
+  justify-content: space-between; /* Spaces logo and nav apart */
+  align-items: center; /* Align items vertically in the center */
+  padding: 10px 80px; /* Adjust padding: 10px top/bottom, 40px left/right */
+  background-color: white;
+  position: fixed; /* Fix the header at the top */
+  width: 100%; /* Full width */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for subtle separation */
+}
+
+/* Logo Container */
+.logo-container {
+  flex: 0 1 auto; /* Prevent the logo from growing or shrinking */
+}
+
+.logo {
+  width: 300px; /* Adjust logo size */
+  height: auto;
+}
+
+/* Navigation Container */
+.nav {
+  flex: 0 1 auto; /* Prevent the navigation from growing or shrinking */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 50px;
+}
+
+.nav-item {
+  margin-left: 30px; /* Space between the nav items */
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-item:hover {
+  color: #0073e6; /* Hover effect */
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px; /* Reduced padding for smaller screens */
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column; /* Stack nav items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .nav-item {
+    margin-left: 0; /* Remove left margin on smaller screens */
+    margin-bottom: 10px; /* Space between nav items */
+  }
+
+  .nav-item:last-child {
+    margin-bottom: 0; /* Remove bottom margin from last item */
+  }
+}

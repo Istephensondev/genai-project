@@ -1,0 +1,134 @@
+/* HeroSection.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+.hero {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    color: white;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center;
+    overflow: hidden; /* Hide any overflow from the video */
+    margin: 0; /* Ensure no margin causes gaps */
+}
+
+.hero-video {
+    position: absolute; /* Position the video behind the content */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the screen */
+    height: 100vh; /* Full height of the screen */
+    object-fit: cover; /* Ensure the video covers the section without distortion */
+    z-index: -1; /* Place video behind the content */
+}
+
+.hero-content {
+    position: relative; /* Ensure the content stays above the video */
+    max-width: none;  /* Limit the max width to prevent stretching */
+    padding: 20px;
+    z-index: 1; /* Ensure content is above the video */
+}
+
+
+.hero h1 {
+    font-size: 5.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    font-size: 2em;
+    font-weight: 100; /* Apply a thin weight */
+    margin-bottom: 2rem;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.hero h3 {
+    font-size: 1.0em;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.cta-primary, .cta-secondary {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cta-primary {
+    background-color: white;
+    color: black;
+}
+
+.cta-primary:hover {
+    background-color: #005bb5;
+}
+
+.cta-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-secondary:hover {
+    background-color: white;
+    color: white;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+/* For tablets and below (up to 768px wide) */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh; /* Adjust height for tablet screens */
+    }
+
+    .hero h1 {
+        font-size: 3rem; /* Smaller font size for tablets */
+    }
+
+    .hero h2 {
+        font-size: 1.5rem; /* Smaller font size for h2 */
+        padding-left: 40px; /* Adjust padding */
+        padding-right: 40px;
+    }
+}
+
+/* For mobile phones (up to 480px wide) */
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh; /* Adjust height for mobile screens */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Even smaller font size for mobile */
+    }
+
+    .hero h2 {
+        font-size: 1.2rem; /* Smaller font size for h2 */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Media query for devices with a maximum width of 320px */
+@media (max-width: 320px) {
+    .hero {
+        height: 80vh; /* Adjust height for smaller screens */
+    }
+}
+
+
+ 
