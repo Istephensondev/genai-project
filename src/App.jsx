@@ -3,15 +3,19 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
 import HeroSection from './HeroSection'; // Import the HeroSection component
 import Chatbot from './components/Chatbot'; // Import the Chatbot component
+import SecondSection from './components/SecondSection'; // Import the new SecondSection component
 
 function App() {
   return (
     <Router>
       <Header />
       <div className="content">
+        {/* Hero Section */}
         <HeroSection />
-
         
+        {/* Second Section */}
+        <SecondSection /> {/* Add the second section here */}
+
         <Routes>
           <Route path="/" element={<h1>Home Page</h1>} />
           <Route path="/mac" element={<h1>Mac Page</h1>} />
@@ -23,8 +27,9 @@ function App() {
           <Route path="/search" element={<h1>Search Page</h1>} />
           <Route path="/cart" element={<h1>Cart Page</h1>} />
         </Routes>
-        
-        <Chatbot /> {/* Add the Chatbot here */}
+
+        {/* Chatbot */}
+        <Chatbot />
       </div>
     </Router>
   );
