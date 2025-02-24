@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
 import HeroSection from './HeroSection'; // Import the HeroSection component
-
 import Chatbot from './components/Chatbot'; // Import the Chatbot component
 
 function App() {
@@ -11,8 +10,8 @@ function App() {
       <Header />
       <div className="content">
         <HeroSection />
-     
-{/*         
+
+        
         <Routes>
           <Route path="/" element={<h1>Home Page</h1>} />
           <Route path="/mac" element={<h1>Mac Page</h1>} />
@@ -24,7 +23,7 @@ function App() {
           <Route path="/search" element={<h1>Search Page</h1>} />
           <Route path="/cart" element={<h1>Cart Page</h1>} />
         </Routes>
-         */}
+        
         <Chatbot /> {/* Add the Chatbot here */}
       </div>
     </Router>
