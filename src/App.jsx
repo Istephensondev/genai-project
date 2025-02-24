@@ -5,6 +5,7 @@ import HeroSection from './HeroSection'; // Import the HeroSection component
 import Chatbot from './components/Chatbot'; // Import the Chatbot component
 import SecondSection from './components/SecondSection'; // Import the new SecondSection component
 import ServiceSection from './components/FutureReadyServices'; // Import the new Service Section
+import ImageSection from './components/ImageSection';  // Import the ImageSection component
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
 
         {/* Service Section */}
         <ServiceSection /> {/* You can add this after the second section */}
+
+        {/* Image Section */}
+        <ImageSection /> {/* Add the Image Section after the service section */}
 
         <Routes>
           <Route path="/" element={<h1>Home Page</h1>} />

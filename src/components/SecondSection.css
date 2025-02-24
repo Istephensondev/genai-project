@@ -2,31 +2,42 @@
 .second-section {
     background-color: #f4f4f4;  /* Light background */
     padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    flex-wrap: wrap;  /* Allow items to wrap in smaller screens */
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between text and image */
+    width: 100%;
+    max-width: 1200px;  /* Limit max width */
+    margin: 0 auto;
 }
 
 .text-content {
     flex: 1;
-    padding-right: 40px;  /* Space between text and image */
+    max-width: 500px;  /* Limit the text width for better readability */
+    padding-right: 20px;  /* Space between text and image */
     box-sizing: border-box;
+    text-align: center;  /* Center align text */
 }
 
 .text-content h2 {
     font-size: 2rem;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .text-content p {
     font-size: 1.1rem;
     color: #666;
+    line-height: 1.6;
 }
 
 .image-content {
@@ -46,7 +57,7 @@
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
-        text-align: center;
+        gap: 15px;
     }
 
     .text-content {
@@ -55,18 +66,22 @@
     }
 
     .text-content h2 {
-        font-size: 1.8rem; /* Slightly smaller on tablets */
+        font-size: 1.8rem;
     }
 
     .text-content p {
-        font-size: 1rem; /* Slightly smaller text */
+        font-size: 1rem;
+    }
+
+    .image-content img {
+        max-width: 80%;
     }
 }
 
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        text-align: center;
+        gap: 15px;
     }
 
     .text-content {
@@ -75,32 +90,32 @@
     }
 
     .text-content h2 {
-        font-size: 1.5rem; /* Smaller title */
+        font-size: 1.5rem;
     }
 
     .text-content p {
-        font-size: 0.9rem; /* Smaller text */
+        font-size: 0.9rem;
     }
 
     .image-content img {
-        max-width: 90%; /* Limit image size on small screens */
+        max-width: 90%;
     }
 }
 
 @media (max-width: 480px) {
     .second-section {
-        padding: 40px 0;  /* Adjust padding for mobile */
+        padding: 40px 20px;  /* Adjust padding for mobile */
     }
 
     .text-content h2 {
-        font-size: 1.4rem; /* Further reduce title size for very small screens */
+        font-size: 1.4rem;
     }
 
     .text-content p {
-        font-size: 0.8rem; /* Further reduce text size */
+        font-size: 0.8rem;
     }
 
     .image-content img {
-        max-width: 100%; /* Ensure image takes up full width */
+        max-width: 100%;
     }
 }

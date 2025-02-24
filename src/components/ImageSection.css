@@ -1,0 +1,39 @@
+.image-section {
+    background-color: #f9f9f9;  /* Light background */
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .image-wrapper {
+    display: flex;
+    justify-content: center;  /* Center the image */
+    align-items: center;      /* Vertically align */
+    max-width: 100%;          /* Ensure image doesn't overflow */
+  }
+  
+  .section-image {
+    max-width: 50%;           /* Ensure the image is responsive */
+    height: auto;              /* Maintain aspect ratio */
+    border-radius: 8px;        /* Optional: Add rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    width: 100%;               /* Take full width, but constrained by max-width */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .section-image {
+      width: 80%;  /* On smaller screens, reduce image width to 80% */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .section-image {
+      width: 100%;  /* On very small screens (like phones), set image width to 100% */
+      padding: 10px; /* Add some padding around the image */
+    }
+  
+    .image-section {
+      padding: 40px 10px;  /* Adjust section padding for smaller screens */
+    }
+  }
+  
